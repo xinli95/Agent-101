@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agent-101"
+version = "0.1.0"
+description = "Deep Dive into Agents"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+langchain = [
+    "langchain>=0.3",
+    "langchain-openai>=0.2",
+    "langchain-community>=0.3",
+    "langchainhub>=0.1",
+    "langchain-chroma>=0.1",
+    "chromadb>=0.5",
+]
+langgraph = [
+    "langgraph>=0.2",
+    "langchain-openai>=0.2",
+    "langchain-core>=0.3",
+]
+strands = [
+    "strands-agents>=0.1",
+    "boto3>=1.35",
+]
+google-adk = [
+    "google-adk>=0.1",
+]
+dev = [
+    "ruff>=0.6",
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+]
+all = [
+    "agent-101[langchain,langgraph,strands,google-adk]",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
