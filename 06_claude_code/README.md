@@ -31,8 +31,6 @@ That's it. Every agent framework in this repo is a more ergonomic wrapper around
 | 08 | `08_background/agent.py` | Daemon threads + completion notifications |
 | 09 | `09_agent_teams/agent.py` | Multiple agents communicating via mailboxes |
 
-## Setup
-
 All sessions are complete, working implementations.
 
 ## Setup
@@ -42,3 +40,7 @@ pip install anthropic python-dotenv
 # Add ANTHROPIC_API_KEY to .env
 python 06_claude_code/01_basic_loop/agent.py
 ```
+
+## Credits
+
+The session structure and teaching approach are inspired by [learn-claude-code](https://github.com/shareAI-lab/learn-claude-code) by shareAI-lab.
