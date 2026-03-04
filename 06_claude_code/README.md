@@ -1,8 +1,8 @@
-# The Raw Agentic Loop
+# How Claude Code Works
 
 Build a Claude Code-style agent from scratch using the Anthropic API directly — no frameworks.
 
-Each session adds **one mechanism** without changing the core loop. By the end you'll understand exactly what LangGraph, Strands, and Google ADK are abstracting.
+Each session adds **one mechanism** without changing the core loop. By the end you'll understand exactly what's happening inside Claude Code (and what LangGraph, Strands, and ADK are abstracting).
 
 ## The Core Insight
 
@@ -21,7 +21,7 @@ That's it. Every agent framework in this repo is a more ergonomic wrapper around
 
 | # | Script | Adds |
 |---|--------|------|
-| 01 | `01_basic_loop/agent.py` | The while loop + one bash tool |
+| 01 | `01_basic_loop/agent.py` | The `while stop_reason == "tool_use"` loop + one bash tool |
 | 02 | `02_tool_use/agent.py` | Multiple tools: bash, read, write, edit |
 | 03 | `03_planning/agent.py` | TodoWrite: structured task decomposition |
 | 04 | `04_subagents/agent.py` | Spawning sub-agents with isolated context |
@@ -33,11 +33,12 @@ That's it. Every agent framework in this repo is a more ergonomic wrapper around
 
 ## Setup
 
+Sessions 01–04 are complete, working implementations. Sessions 05–09 are documented stubs with implementation guides.
+
+## Setup
+
 ```bash
 pip install anthropic python-dotenv
 # Add ANTHROPIC_API_KEY to .env
-```
-
-```bash
-python 01_raw_loop/01_basic_loop/agent.py
+python 06_claude_code/01_basic_loop/agent.py
 ```
