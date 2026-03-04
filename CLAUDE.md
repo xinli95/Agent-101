@@ -51,7 +51,7 @@ patterns/             — Cross-framework comparisons
 
 ## Architecture Notes
 
-**06_claude_code sessions:** Each session adds one mechanism without changing the core loop. Sessions 01–04 are complete implementations; 05–09 are documented stubs.
+**06_claude_code sessions:** Each session adds one mechanism without changing the core loop. All 9 sessions are complete, working implementations.
 
 **Google ADK** is async-first — all scripts use `asyncio.run(main())`. ADK tools must return `dict`.
 

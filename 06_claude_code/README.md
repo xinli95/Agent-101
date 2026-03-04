@@ -33,7 +33,7 @@ That's it. Every agent framework in this repo is a more ergonomic wrapper around
 
 ## Setup
 
-Sessions 01–04 are complete, working implementations. Sessions 05–09 are documented stubs with implementation guides.
+All sessions are complete, working implementations.
 
 ## Setup
 
