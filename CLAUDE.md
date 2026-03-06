@@ -14,6 +14,7 @@ pip install -e ".[langchain]"
 pip install -e ".[langgraph]"
 pip install -e ".[strands]"
 pip install -e ".[google-adk]"
+pip install -e ".[mcp]"
 pip install -e ".[all]"
 pip install -e ".[dev]"   # ruff + pytest
 
@@ -34,6 +35,7 @@ ruff format .
 02_langgraph/         — LangGraph (OpenAI backend)
 03_strands/           — Strands Agents (AWS Bedrock / Claude)
 04_google_adk/        — Google ADK (Gemini)
+05_mcp/               — Model Context Protocol: using and building MCP servers
 patterns/             — Cross-framework comparisons
   react/              ✅ complete
   plan_and_execute/   🚧 stubs
@@ -47,6 +49,7 @@ patterns/             — Cross-framework comparisons
 - `01_langchain/`, `02_langgraph/`: OpenAI (`gpt-4o-mini`)
 - `03_strands/`: Amazon Bedrock (Claude, via AWS credentials)
 - `04_google_adk/`: Gemini (`gemini-2.0-flash`)
+- `05_mcp/`: Anthropic API directly (`claude-opus-4-6`) + MCP Python SDK
 - `06_claude_code/`: Anthropic API directly (`claude-opus-4-6`)
 
 ## Architecture Notes

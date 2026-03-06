@@ -10,6 +10,7 @@
 02_langgraph/     — LangGraph: graph-based, stateful orchestration
 03_strands/       — Strands Agents: AWS-native (Amazon Bedrock)
 04_google_adk/    — Google ADK: Gemini-native (Google Cloud)
+05_mcp/           — Model Context Protocol: connect agents to any tool or data source
 patterns/         — Same problem implemented in all frameworks side-by-side
 06_claude_code/   — How Claude Code works: build it from scratch, session by session
 ```
@@ -20,8 +21,9 @@ patterns/         — Same problem implemented in all frameworks side-by-side
 2. **[01_langchain/](01_langchain/)** — Start here for framework-based agents.
 3. **[02_langgraph/](02_langgraph/)** — Go deeper: explicit graph control.
 4. **[03_strands/](03_strands/)** / **[04_google_adk/](04_google_adk/)** — Cloud-native options.
-5. **[patterns/](patterns/)** — Compare all 4 frameworks on the same task.
-6. **[06_claude_code/](06_claude_code/)** — Go under the hood: rebuild Claude Code's agentic loop from scratch using the Anthropic API directly.
+5. **[05_mcp/](05_mcp/)** — Learn MCP: use existing servers and build your own.
+6. **[patterns/](patterns/)** — Compare all 4 frameworks on the same task.
+7. **[06_claude_code/](06_claude_code/)** — Go under the hood: rebuild Claude Code's agentic loop from scratch using the Anthropic API directly.
 
 ## Frameworks & LLM Backends
 
@@ -31,6 +33,7 @@ patterns/         — Same problem implemented in all frameworks side-by-side
 | `02_langgraph/` | LangGraph | OpenAI `gpt-4o-mini` |
 | `03_strands/` | Strands Agents | AWS Bedrock (Claude) |
 | `04_google_adk/` | Google ADK | Gemini `gemini-2.0-flash` |
+| `05_mcp/` | MCP Python SDK | Claude (direct API) |
 | `06_claude_code/` | Anthropic SDK (no framework) | Claude (direct API) |
 
 ## Setup
@@ -47,6 +50,7 @@ pip install -e ".[langchain]"
 pip install -e ".[langgraph]"
 pip install -e ".[strands]"
 pip install -e ".[google-adk]"
+pip install -e ".[mcp]"
 pip install -e ".[all]"         # everything
 ```
 
