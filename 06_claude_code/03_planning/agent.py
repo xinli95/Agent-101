@@ -8,7 +8,7 @@ Key insight: structured planning is just another tool.
 The loop still doesn't change.
 
 Run:
-    python 01_raw_loop/03_planning/agent.py
+    python 06_claude_code/03_planning/agent.py
 """
 
 import json
@@ -143,7 +143,7 @@ def agent_loop(user_message: str) -> str:
 
     while True:
         response = client.messages.create(
-            model="claude-opus-4-6",
+            model="claude-haiku-4-5-20251001",
             max_tokens=4096,
             system=SYSTEM,
             messages=messages,

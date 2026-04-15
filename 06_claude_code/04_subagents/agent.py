@@ -9,7 +9,7 @@ with a focused prompt. The outer agent hands off, collects the result,
 and continues.
 
 Run:
-    python 01_raw_loop/04_subagents/agent.py
+    python 06_claude_code/04_subagents/agent.py
 """
 
 import subprocess
@@ -76,7 +76,7 @@ def run_subagent(task: str, context: str = "") -> str:
 
     while True:
         response = client.messages.create(
-            model="claude-opus-4-6",
+            model="claude-haiku-4-5-20251001",
             max_tokens=2048,
             system=system,
             messages=messages,
@@ -120,7 +120,7 @@ def agent_loop(user_message: str) -> str:
 
     while True:
         response = client.messages.create(
-            model="claude-opus-4-6",
+            model="claude-haiku-4-5-20251001",
             max_tokens=4096,
             system=SYSTEM,
             messages=messages,

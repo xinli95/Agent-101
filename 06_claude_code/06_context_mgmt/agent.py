@@ -123,7 +123,7 @@ def agent_loop(user_message: str, messages: list | None = None) -> tuple[str, li
             print(f"  [context] Token estimate after compression: ~{estimate_tokens(messages):,}\n")
 
         response = client.messages.create(
-            model="claude-opus-4-6",
+            model="claude-haiku-4-5-20251001",
             max_tokens=4096,
             system="You are a helpful coding agent. Use bash to accomplish tasks.",
             messages=messages,

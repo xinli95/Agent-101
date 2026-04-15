@@ -7,7 +7,7 @@ The entire agent is: call LLM → if tool_use → run tool → append result →
 Every agent framework you'll use in later sections wraps this exact pattern.
 
 Run:
-    python 01_raw_loop/01_basic_loop/agent.py
+    python 06_claude_code/01_basic_loop/agent.py
 """
 
 import subprocess
@@ -57,7 +57,7 @@ def agent_loop(user_message: str) -> str:
 
     while True:
         response = client.messages.create(
-            model="claude-opus-4-6",
+            model="claude-haiku-4-5-20251001",
             max_tokens=4096,
             system="You are a coding agent. Use bash to accomplish tasks. Be concise.",
             messages=messages,

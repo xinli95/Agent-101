@@ -7,7 +7,7 @@ only the dispatch map grows.
 Key insight: "adding a tool means adding one handler and one entry in TOOL_HANDLERS."
 
 Run:
-    python 01_raw_loop/02_tool_use/agent.py
+    python 06_claude_code/02_tool_use/agent.py
 """
 
 import os
@@ -144,7 +144,7 @@ def agent_loop(user_message: str) -> str:
 
     while True:
         response = client.messages.create(
-            model="claude-opus-4-6",
+            model="claude-haiku-4-5-20251001",
             max_tokens=4096,
             system="You are a coding agent. Use tools to read, write, and edit files.",
             messages=messages,

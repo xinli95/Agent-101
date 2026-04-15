@@ -92,7 +92,7 @@ def worker_agent_loop(task: str, system: str) -> str:
 
     while True:
         response = client.messages.create(
-            model="claude-opus-4-6",
+            model="claude-haiku-4-5-20251001",
             max_tokens=2048,
             system=system,
             messages=messages,
@@ -223,7 +223,7 @@ def agent_loop(user_message: str) -> str:
 
     while True:
         response = client.messages.create(
-            model="claude-opus-4-6",
+            model="claude-haiku-4-5-20251001",
             max_tokens=4096,
             system=ORCHESTRATOR_SYSTEM,
             messages=messages,

@@ -15,6 +15,7 @@ pip install -e ".[langgraph]"
 pip install -e ".[strands]"
 pip install -e ".[google-adk]"
 pip install -e ".[mcp]"
+pip install -e ".[computer-use]"
 pip install -e ".[all]"
 pip install -e ".[dev]"   # ruff + pytest
 
@@ -42,6 +43,7 @@ patterns/             — Cross-framework comparisons
   reflection/         🚧 stubs
   multi_agent/        🚧 stubs
 06_claude_code/       — How Claude Code works; 9-session progression (Anthropic API, no framework)
+07_computer_use/      — Computer use agents: native beta loop + OSWorld-style Planner+Grounder
 ```
 
 ## LLM Backends
@@ -51,6 +53,7 @@ patterns/             — Cross-framework comparisons
 - `04_google_adk/`: Gemini (`gemini-2.0-flash`)
 - `05_mcp/`: Anthropic API directly (`claude-opus-4-6`) + MCP Python SDK
 - `06_claude_code/`: Anthropic API directly (`claude-opus-4-6`)
+- `07_computer_use/`: Anthropic API directly (`claude-opus-4-6`) + pyautogui
 
 ## Architecture Notes
 

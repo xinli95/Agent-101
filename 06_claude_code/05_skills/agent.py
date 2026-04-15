@@ -136,7 +136,7 @@ def agent_loop(user_message: str) -> str:
     while True:
         # Re-read system prompt each turn — picks up newly loaded skills immediately
         response = client.messages.create(
-            model="claude-opus-4-6",
+            model="claude-haiku-4-5-20251001",
             max_tokens=4096,
             system=get_system_prompt(),
             messages=messages,
